@@ -8,6 +8,8 @@ interface AddableValue extends Value {
 
 interface AndableValue extends Value {
 	Value and(Value other);
+	
+	default void foo() {} // keyword default: to add implementatation
 }
 
 class IntValue implements AddableValue, AndableValue {
